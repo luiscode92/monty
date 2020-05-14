@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	global.fp = fopen(argv[1], "r");
 	if (!(global.fp))
 	{
-		dprintf(STDERR_FILENO, "Error: Can't open file%s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while (fgets(buffer, sizeof(buffer), global.fp) != NULL)

@@ -57,7 +57,7 @@ void add_node(stack_t **stack, int value)
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
-		dprintf(STDERR_FILENO, "Erros: malloc failed\n");
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		free_all(stack);
 		exit(EXIT_FAILURE);
 	}
@@ -83,7 +83,7 @@ void add_node_end(stack_t **stack, int value)
 	new_node = malloc(sizeof(stack_t));
 	if (!new_node)
 	{
-		dprintf(STDERR_FILENO, "Error:malloc failed\n");
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		free_all(stack);
 		exit(EXIT_FAILURE);
 	}
