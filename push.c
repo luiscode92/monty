@@ -40,7 +40,7 @@ void _push(stack_t **stack, unsigned int line)
  */
 void error(stack_t **stack, unsigned int line)
 {
-	dprintf(STDERR_FILENO, "L%u:usage:push integer\n", line);
+	dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line);
 	free_all(stack);
 	exit(EXIT_FAILURE);
 }
