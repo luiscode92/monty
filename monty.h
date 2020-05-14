@@ -63,6 +63,7 @@ void add_node_end(stack_t **stack, int value);
 void free_all(stack_t **stack);
 void _pall(stack_t **stack, unsigned int line);
 void _pint(stack_t **stack, unsigned int line);
+void _pop(stack_t **stack, unsigned int line);
 
 #endif /* MONTY_H */
 
