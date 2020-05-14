@@ -42,4 +42,5 @@ int main(int argc, char **argv)
 		line++;
 	}
 	free_all(&stack);
+	return (EXIT_SUCCESS);
 }

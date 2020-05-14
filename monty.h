@@ -1,10 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
+
 #include <stdio.h>
 #include <stdlib.h>
-//#include <sys/types.h>
-//#include <sys/stat.h>
-//#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
 #include <ctype.h>
@@ -61,6 +62,7 @@ void add_node(stack_t **stack, int value);
 void add_node_end(stack_t **stack, int value);
 void free_all(stack_t **stack);
 void _pall(stack_t **stack, unsigned int line);
+void _pint(stack_t **stack, unsigned int line);
 
 #endif /* MONTY_H */
 
