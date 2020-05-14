@@ -32,8 +32,7 @@ int main(int argc, char **argv)
 		token = strtok(buffer, " \t");
 		if (token[0] == '#')
 		{
-			printf("fuck");
-			free(token);
+			_nop(&stack, line);
 		}
 		else if (token[0] != '\n')
 		{
