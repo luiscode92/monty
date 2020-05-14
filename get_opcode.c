@@ -33,7 +33,7 @@ void (*get_opcode(stack_t **stack, char *str, int line))(stack_t **, unsigned in
 		i++;
 	}
 
-	dprintf(STDERR_FILENO, "%u: unknown instruction %s\n", line, str);
+	dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n", line, str);
 	free_all(stack);
 	exit(EXIT_FAILURE);
 

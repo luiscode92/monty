@@ -18,20 +18,21 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		dprintf(STDERR_FILENO, "USAGE: montyfile\n");
+		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	global.fp = fopen(argv[1], "r");
-	if (global.fp == NULL)
+	if (!(global.fp))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't open file%s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while (fgets(buffer, sizeof(buffer), global.fp) != NULL)
 	{
-		token = strtok(buffer, " \n\t\r");
+		token = strtok(buffer, " \t");
 		if (token[0] == '#')
 		{
+			printf("fuck");
 			free(token);
 		}
 		else if (token[0] != '\n')
