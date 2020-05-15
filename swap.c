@@ -10,7 +10,7 @@ void _swap(stack_t **stack, unsigned int line)
 {
 	int tmp;
 
-	if (*stack && (*stack)->next->n)
+	if (*stack && (*stack)->next-)
 	{
 		tmp = (*stack)->n;
 		(*stack)->n = (*stack)->next->n;
@@ -18,7 +18,7 @@ void _swap(stack_t **stack, unsigned int line)
 	}
 	else
 	{
-		dprintf(STDERR_FILENO, "L%u cant swap, stack too short\n", line);
+		dprintf(STDERR_FILENO, "L%u: can't swap, stack too short\n", line);
 		free_all(stack);
 		exit(EXIT_FAILURE);
 	}
