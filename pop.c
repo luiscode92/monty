@@ -19,7 +19,7 @@ void _pop(stack_t **stack, unsigned int line)
 	}
 	else
 	{
-		dprintf(STDERR_FILENO, "L%u:can't pint, stack empty", line);
+		dprintf(STDERR_FILENO, "L%u: can't pop an empty stack", line);
 		free_all(stack);
 		exit(EXIT_FAILURE);
 	}
