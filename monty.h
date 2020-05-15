@@ -49,12 +49,12 @@ typedef struct stack_s
 typedef struct instruction_s
 {
         char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+        void (*f)(stack_t **stack, unsigned int line);
 } instruction_t;
 
 extern global_t global;
 
-int main(int argc, char **argv);
+//int main(int argc, char **argv);
 void (*get_opcode(stack_t **stack, char *str, int line))(stack_t **, unsigned int);
 void _push(stack_t **stack, unsigned int line);
 void error(stack_t **stack, unsigned int line);
