@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (fgets(buffer, sizeof(buffer), global.fp) != NULL)
+	while (fgets(buffer, sizeof(buffer), global.fp))
 	{
 		token = strtok(buffer, " \t");
 		if (token[0] == '#')
