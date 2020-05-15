@@ -10,7 +10,7 @@ void _swap(stack_t **stack, unsigned int line)
 {
 	int tmp;
 
-	if (*stack && (*stack)->next-)
+	if (*stack && (*stack)->next)
 	{
 		tmp = (*stack)->n;
 		(*stack)->n = (*stack)->next->n;

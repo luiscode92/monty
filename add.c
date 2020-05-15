@@ -19,7 +19,7 @@ void _add(stack_t **stack, unsigned int line)
 	}
 	else
 	{
-		dprintf(STDERR_FILENO, "L%u: cant add stack too short\n", line);
+		dprintf(STDERR_FILENO, "L%u: can't add, stack too short\n", line);
 		free_all(stack);
 		exit(EXIT_FAILURE);
 	}
